@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Здравствуйте, {{g.user.name}}!</h1>
+<form action="" method="post" name="select_date">
+    {{form_date.hidden_tag()}}
+    <p>
+        Выберете дату для поиска записи в книжке <br> 
+    </p>
+    <p><input type="date" name="selected_date"></p>
+    <p><input type="submit" name="btn_date_submit" value="Дату подтверждаю"></p>
+</form>
+<hr>
+<form action="" method="post" name="notebook_content">
+    {{form_content.hidden_tag()}}
+    <p>
+        Запись в книжке на дату "{{selected_date}}": <br> 
+        {{form_content.notebook_record(rows=10, cols=40)}}<br>
+    </p>
+    <p>
+    <input type="submit" name="btn_submit" value="Заменить запись">
+    <input type="submit" name="btn_delete" value="Удалить запись">
+    </p>
+</form>
+{% endblock %}

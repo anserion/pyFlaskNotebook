@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title> pyFlaskNotebook - простая WEB-записная книжка</title>
+    {% endif %}    
+</head>
+  <body>
+  <div>
+    <a href="/index">На главную</a> 
+    <a href="/login">Вход в систему</a>
+    <a href="/logout">Выход из системы</a>
+  </div>
+    <hr>
+    {% block content %}{% endblock %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <hr>
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <hr>
+  </body>
+</html>
