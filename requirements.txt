@@ -1,0 +1,48 @@
+Библиотеки, требуемые для запуска проекта pyFlask
+------------------------------------------------
+1) flask - библиотека поддержки серверного web-api на python
+установка в Windows: pip install flask
+установка в Linux (тестировалось на Linux Mint 2020.1):
+(skiped)@linux_box: sudo python3 -m pip install flask
+Автоматически подтягиваются зависимости (3 пакета):
+jinja2, itsdangerous, werkzeug
+
+2) sqlalchemy - ООП-обертка над SQL
+установка в Windows: pip install sqlalchemy
+установка в Linux (тестировалось на Linux Mint 2020.1):
+(skiped)@linux_box: sudo python3 -m pip install sqlalchemy
+Автоматически подтягиваются зависимости (1 пакет):
+greenlet
+
+3) flask-wtf - модуль ООП-поддержки работы с формами
+установка в Windows: pip install flask-wtf
+установка в Linux (тестировалось на Linux Mint 2020.1):
+(skiped)@linux_box: sudo python3 -m pip install flask-wtf
+Автоматически подтягиваются зависимости (1 пакет):
+WTForms
+
+4) flask-login - модуль поддержки работы с сессионным Web-входом/выходом
+установка в Windows: pip install flask-login
+установка в Linux (тестировалось на Linux Mint 2020.1):
+(skiped)@linux_box: sudo python3 -m pip install flask-login
+
+
+# ------------------------------------------------------
+# если что-то "пошло не так"
+# ------------------------------------------------------
+# 1) установить Linux (тестировалось на Linux Mint 2020.1)
+# 2) для установки python3 выполнить:
+#    (skiped)@linux_box: sudo apt install python3
+# 3) для установки библиотеки flask выполнить:
+#    (skiped)@linux_box: sudo python3 -m pip install flask
+# 4) для установки библиотеки sqlalchemy выполнить:
+#    (skiped)@linux_box: sudo python3 -m pip install sqlalchemy
+# 5) для установки библиотеки flask-wtf выполнить:
+#    (skiped)@linux_box: sudo python3 -m pip install flask-wtf
+# 6) для установки библиотеки flask-login выполнить:
+#    (skiped)@linux_box: sudo python3 -m pip install flask-login
+
+# Дополнительные зависимости (jinja2, itsdangerous, werkzeug, greenlet, WTForms
+# и т.п.) должны "подтянуться" автоматически
+# ------------------------------------------------------
+
